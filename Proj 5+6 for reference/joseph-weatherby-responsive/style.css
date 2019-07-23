@@ -1,0 +1,290 @@
+/*=====================================================
+ Reset 
+ =====================================================*/
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,figure,footer,header,nav,section,main {
+	background:transparent;
+	border:0;
+	box-sizing:border-box;
+	font-size:100%;
+	font-weight: light;
+	margin:0;
+	outline:0;
+	padding:0;
+	vertical-align:baseline;
+}
+
+img {
+	display: block;
+	height:auto;
+	max-width:100%;
+}
+/***************************************************
+// Master Layout & Type & Whatnot
+***************************************************/
+
+body{
+	color: black;
+	font-family: 'Helvetica Nue', sans-serif;
+	margin: 0;
+}
+
+html{
+	background-color: rgb(51, 51, 51);
+	line-height: 1.5;
+}
+
+main{
+	text-align: center;
+}
+
+h1{
+	font-size: 4rem;
+	font-weight: lighter;
+}
+
+h3{
+	font-weight: normal;
+	font-size: 1.5rem;
+}
+
+a{
+	color: rgb(233, 107, 107);
+	text-decoration: none;
+}
+
+button{
+	background-color: #fec502;
+	border: none;
+	border-radius: 5px;
+	color: white;
+	font-size: 1rem;
+	line-height: 1.2;
+	padding: 1rem;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+.list-heading {
+	background-color: white;
+}
+
+.list-heading h2{
+	font-size: 30px;
+	font-weight: lighter;
+}
+
+.list-heading p{
+	color: gray;
+	font-size: 22px;
+}
+
+/***************************************************
+// Header Component
+***************************************************/
+
+header{
+	margin:2rem 1rem 0 1rem;
+}
+
+header h1{
+	font-family: 'Kaushan Script', cursive;
+	font-size: 1.5rem;
+	font-weight: lighter;
+	color: #fec502;
+	margin-bottom: 1rem;
+}
+
+nav ul{
+	list-style-type: none;
+	margin-bottom: 1.5rem;
+}
+
+header li{
+	border-top: 1px solid gray;
+}
+
+header a{
+	color: white;
+	padding: .75rem 1rem; 
+}
+
+@media(min-width: 1000px ) {
+	header {
+		display: flex;
+		justify-content: space-between;
+	}
+	header li {
+		display: inline;
+		border-top: none;
+	}
+}
+
+/***************************************************
+// Hero Component
+***************************************************/
+.hero {
+	align-content: space-around;
+	background-image: url(images/header-bg.jpg);
+	background-position: center;
+	background-size: cover;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	height: 60vh;
+	justify-content: center;
+}
+
+.hero h2{
+	font-family: 'Kaushan Script', 'papyrus', sans-serif;
+	font-size: 30px;
+	text-transform: capitalize;
+}
+
+.hero p{
+	font-size: 45px;
+	text-transform: uppercase;
+}
+
+.hero button{
+	margin: 1rem auto;
+	padding-left: 3rem;
+	padding-right: 3rem;
+}
+
+/***************************************************
+// services component
+***************************************************/
+.services {
+	background-color: white;
+}
+
+.services .list-heading {
+	padding: 2.5rem 0 0 0;
+}
+
+.services-listing{
+	padding: 1rem 1.5rem 3rem 1.5rem;
+	text-align: center;
+}
+
+.services-item p{
+	color: gray;
+}
+
+@media(min-width: 1000px ) {
+	.services-listing{
+		display: grid;
+		grid-column-gap: 1rem;
+		grid-template-columns: 300px 300px 300px;
+		margin: auto;
+		max-width: calc(900px + 2rem)
+	}
+	.services-item{
+		padding: 1rem;
+	}
+	.services-item p{
+		padding-bottom: 1rem;
+	}
+}
+
+.services-item {
+	margin-top: 2rem;
+}
+.services-item img{
+	display: inline-block;
+	padding: 0;
+	margin: auto;
+}
+
+.services-item button {
+	padding: .5rem 1rem;
+}
+
+/***************************************************
+// Portfolio component
+***************************************************/
+
+.portfolio-list{
+	padding-top: .5rem;
+	background-color: #e3e3e3;
+	padding-bottom: 1.5rem;
+}
+
+.portfolio-list .list-heading{
+	background-color: #e3e3e3;  
+}
+
+.portfolio-item{
+	background-color: white;
+	margin: .5rem auto 2.5rem;
+	max-width: 400px;
+	padding: 0;
+}
+
+.portfolio-item-caption{
+	background-color: white;
+	padding: .5rem 0 1.5rem 0;
+	max-width: 400px;
+}
+
+@media(min-width: 1000px ) {
+	.portfolio-listing {
+		display: grid;
+		grid-column-gap: 1rem;
+		grid-template-columns: 350px 350px;
+		margin: auto;
+		max-width: calc(700px + 1rem);
+	}
+	.portfolio-item p{
+		font-style: italic;
+		padding-bottom: 1rem;
+	}
+}
+
+@media(min-width: 1425px ) {
+	.portfolio-listing {
+		display: grid;
+		grid-column-gap: 1rem;
+		grid-template-columns: 350px 350px 350px;
+		margin: auto;
+		max-width: calc(1050px + 2rem) 
+	}
+	.portfolio-item p{
+		font-style: italic;
+		padding-bottom: 1rem;
+	}
+}
+/***************************************************
+// Footer component
+***************************************************/
+
+footer {
+	background-color: white;
+	font-size: 13px;
+	line-height: 1em;
+	padding: 1rem 0 1rem 2rem;
+
+}
+
+footer a{
+	font-size: 12px;
+	color: #fec502;
+}
+
+footer nav{
+	margin-top: .5rem;
+}
+@media(min-width: 1000px ) {
+	footer {
+		display: flex;
+		justify-content: space-between;
+		padding-right: 1.5rem;
+	}
+	footer li {
+		display: inline;
+		border-top: none;
+		margin-right: 1.5rem;
+	}
+}
+}
